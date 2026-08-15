@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Editorial Foundation */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #ffffff;
+  color: #000000;
+}
