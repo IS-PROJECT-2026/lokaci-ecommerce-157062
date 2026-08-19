@@ -17,7 +17,7 @@
 
 ## 3. Reflection — Grounded in Your Git History
 
-### A. Your Best Commit
+### A. My Best Commit
 
 - **Commit URL:** https://github.com/IS-PROJECT-2026/lokaci-ecommerce-157062/commit/367321ed753e1fa5034c51a23dd82676681d1a2d
 
@@ -25,24 +25,18 @@
 
 ### B. A Mistake or Struggle
 
-Link to a commit, PR, or issue where something went wrong — a bad commit message you had to fix, a branch you had to delete and recreate, a PR that needed rework, or a deployment that broke.
-
-- **Link to the evidence:** [Paste URL here]
-- **What happened and how did you recover?** [2–3 sentences]
+- **Link to the evidence:** https://github.com/IS-PROJECT-2026/lokaci-ecommerce-157062/commit/f2899f678735833b33750bda5fe921dc49517baf
+- **What happened and how did you recover?** While engineering the first merge conflict, I created a second branch but ran `git pull` before actually committing my change on it. Since there was nothing local to conflict with, Git fast-forwarded silently instead of producing a real conflict, and I lost the demo. I recreated the branch from the exact commit before the first branch was merged, made sure to commit the edit before pulling, and got a genuine conflict the second time.
 
 ### C. A Pull Request You're Proud Of
 
-Paste the URL of the PR that best shows your self-review process — one where the description is clear, the issue linkage is correct, and the diff tells a coherent story.
-
-- **PR URL:** [Paste the full GitHub PR URL here]
-- **What did you check before merging?** [1–2 sentences on what you reviewed]
+- **PR URL:** (https://github.com/IS-PROJECT-2026/lokaci-ecommerce-157062/commit/7a2289e662b2515cdfd033108987bb080e91d9e4)
+- **What did you check before merging?** I reviewed the Files changed tab to confirm the conflict markers had been fully removed, that only the intended `<h1>`/`<p>` line was affected, and that no unrelated whitespace or formatting changes had crept in from the merge.
 
 ### D. One Thing You Would Do Differently
 
-If you had to restart this project from scratch with everything you know now, name one specific workflow decision you would change (not a code change — a Git/project management decision).
-
-- **What would you change?** [1–2 sentences]
-- **Link to the evidence of the original decision:** [Paste URL to the commit, branch, or issue that shows the decision you'd redo]
+- **What would you change?** I'd push an initial commit to `main` (even just a placeholder README) before creating any feature branches. Because I skipped this, my first branch had nothing to compare against when opening a PR, and I had to fix it retroactively with an orphan branch; a step that wouldn't have been necessary with a proper starting commit.
+- **Link to the evidence of the original decision:** (https://github.com/IS-PROJECT-2026/lokaci-ecommerce-157062/commit/77f49f2a1b67c25bcc5221547e7c69ea55959f7f)
 
 ---
 
