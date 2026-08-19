@@ -50,33 +50,33 @@ Demonstrate your workflow mechanics by embedding your screenshots below.
 
 _Provide a screenshot showing your active milestone(s) and the granular tracking issues linked directly to them._
 
-[PASTE YOUR MILESTONE SCREENSHOT DIRECTLY HERE]
+<img width="1524" height="553" alt="image" src="https://github.com/user-attachments/assets/c65818e5-784d-4013-9894-50601182523b" />
 
-- **Caption:** [Write a brief sentence describing your milestones here]
+- **Caption:** Three milestones namely Site Foundation, Product Catalogue, and Polish and Deploy, each fully closed with all linked issues (3/3, 2/2, 3/3) completed before merging to main.
 
 ### B. Project Board
 
 _Provide a screenshot of your GitHub Project Board with your issues organized dynamically across columns (To Do, In Progress, Done)._
 
-[PASTE YOUR PROJECT BOARD SCREENSHOT DIRECTLY HERE]
+<img width="1568" height="526" alt="image" src="https://github.com/user-attachments/assets/ff2c4a46-33ec-4595-a3f2-4273a9e9ac95" />
 
-- **Caption:** [Write a brief sentence describing your board state here]
+- **Caption:** Kanban board mid-project, showing issues actively distributed across To Do, In Progress, and Done as work progressed through Milestones 1 and 2.
 
 ### C. Branching Architecture
 
 _Provide a screenshot showing your local or remote Git branch list, highlighting your use of conventional, issue-linked naming patterns (e.g., `feat/`, `fix/`, `style/`)._
 
-[PASTE YOUR BRANCHING SCREENSHOT DIRECTLY HERE]
+<img width="1568" height="375" alt="image" src="https://github.com/user-attachments/assets/4b588d90-2bc9-45ac-9cb8-ed9ad1f86913" />
 
-- **Caption:** [Write a brief sentence describing your branch list here]
+- **Caption:** Branch list following the category/issue-number-description and category/conflict-number-letter naming conventions, e.g. feat/1-base-structure, feat/2-nav-hero, feat/4-product-catalog, and the design/conflict-1-* series used for the merge conflict demos.
 
 ### D. Pull Requests & Traceability
 
 _Provide a screenshot of a completed or open Pull Request (PR) on GitHub that clearly shows it is linked to a related development issue._
 
-[PASTE YOUR PULL REQUEST SCREENSHOT DIRECTLY HERE]
+<img width="1148" height="215" alt="image" src="https://github.com/user-attachments/assets/eb252762-fff5-4174-a796-3d13806f1bcd" />
 
-- **Caption:** [Write a brief sentence describing your PR and what issue it closes]
+- **Caption:** PR #10 merging feat/2-nav-hero into main, with "Closes #2" in the title directly linking it to its source issue.
 
 ---
 
@@ -90,55 +90,58 @@ You must engineer **three merge conflicts**, each triggered by a **different cau
 
 ### Conflict 1 — Full Chronology
 
-**What cause did you use?** [Name the type of conflict cause from the lecture]
+**What cause did you use?** Same Line edit
 
 #### Step 1: Generating the Clash
 
 _Screenshot showing the merge attempt and the conflict warning._
 
-[PASTE SCREENSHOT OF ATTEMPTED MERGE / TERMINAL WARNING HERE]
+<img width="292" height="342" alt="image" src="https://github.com/user-attachments/assets/3e2b3b6b-486a-4534-9ca1-c04e65683dde" />
 
-- **Caption:** [Describe which two branches collided and the warning received]
+
+- **Caption:** Network graph showing design/conflict-1-c and design/conflict-1-d diverging from the same commit on main, then converging at the merge point — the structural setup that produced the conflict when both branches edited the same subtitle line.
 
 #### Step 2: Inside the Code Editor (Conflict Markers)
 
 _Screenshot showing the raw, unresolved conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`) in your editor._
 
-[PASTE SCREENSHOT OF RAW CONFLICT MARKERS HERE]
+<img width="1545" height="301" alt="image" src="https://github.com/user-attachments/assets/840444b1-10cb-4ce5-b679-63f6d8f6d2eb" />
 
-- **Caption:** [Explain what caused the dispute and your reasoning for the final version]
+- **Caption:** Both <p> subtitle lines from the two diverging branches, side by side inside Git's conflict markers - Curated timepieces, just for you! from HEAD (branch D) and Handpicked watches, delivered with love. from main (branch C's merged version). Neither could be auto-selected since both modified the identical line independently.
 
 #### Step 3: Resolution & Clean Merge
 
 _Screenshot of your clean Git history or completed PR showing the conflict was resolved and merged._
 
-[PASTE SCREENSHOT OF CLEAN RESOLUTION HERE]
+<img width="1568" height="283" alt="image" src="https://github.com/user-attachments/assets/ba89bd32-8f09-4c43-92f8-6bcb2c3a0b63" />
 
-- **Caption:** [Describe the final state after resolution]
+- **Caption:** Merge commit 7a2289e completing PR #14, with two parent commits confirming a true merge occurred (not a fast-forward) — the conflict was resolved and the branch merged cleanly into main.
 
 ---
 
 ### Conflict 2 — Different Cause
 
-**What cause did you use?** [Name the type of conflict cause — must be different from Conflict 1]
+**What cause did you use?** The Appended List
 
-**Why does this cause trigger a conflict?** [1–2 sentences explaining the mechanism]
+**Why does this cause trigger a conflict?** Two branches (design/conflict-2-a and design/conflict-2-b) each independently added a new link to the end of the same <footer> element. Since both insertions targeted the same position with no shared edit between them, Git couldn't determine which line should come first and flagged it as a conflict.
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 2 HERE]
+<img width="1568" height="210" alt="image" src="https://github.com/user-attachments/assets/a7a04252-66f9-4a32-8aa5-50170a6fe4ac" />
 
-- **Caption:** [Brief description of the conflicting branches and file]
+
+- **Caption:** WhatsApp link (HEAD, branch B) and Instagram link (main, branch A's merged version) both inserted at the same position inside the footer — resolved by keeping both.
 
 ---
 
 ### Conflict 3 — Different Cause
 
-**What cause did you use?** [Name the type of conflict cause — must be different from Conflicts 1 and 2]
+**What cause did you use?** Delete vs. Modify
 
 **Why does this cause trigger a conflict?** [1–2 sentences explaining the mechanism]
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 3 HERE]
+<img width="1568" height="103" alt="image" src="https://github.com/user-attachments/assets/4b984eab-4649-47b1-a627-f145e742d22f" />
 
-- **Caption:** [Brief description of the conflicting branches and file]
+
+- **Caption:** Branch design/conflict-3-a deleted README.md entirely, while design/conflict-3-b, based on the same earlier commit, modified its content instead. Git can't automatically decide whether the file should exist or not, so it flags a modify/delete conflict rather than a text-level one. Resolved by keeping the modified version and discarding the deletion.
 
 ---
 
